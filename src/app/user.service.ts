@@ -3,11 +3,12 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { User } from './user';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from '../environments/environment';
 
 @Injectable()
 export class UserService {
 
-  usersUrl = "https://shuho-api.herokuapp.com/users";
+  usersUrl = environment.apiEndpoint + 'users';
 
   constructor(private http: HttpClient) { }
 
