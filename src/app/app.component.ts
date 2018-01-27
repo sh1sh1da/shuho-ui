@@ -9,7 +9,7 @@ import { UserService } from './user.service';
 })
 export class AppComponent {
   title = 'shuho';
-  users = [new User("test1", "test1"), new User("test2", "test2")];
+  users: User[];
 
   constructor(private userService: UserService) { }
 
