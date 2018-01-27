@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable()
 export class UserService {
 
-  usersUrl = "https://shuho-api.herokuapp.com/";
+  usersUrl = "https://shuho-api.herokuapp.com/users";
 
   constructor(private http: HttpClient) { }
 
