@@ -7,12 +7,14 @@ import { UsersService } from './users.service';
 })
 export class UsersComponent implements OnInit {
   users: User[];
+  loading = true;
 
   constructor(private usersService: UsersService) { }
 
   ngOnInit() {
     this.usersService.getUsers().subscribe(users => {
       this.users = users;
+      this.loading = false;
     });
   }
 }
