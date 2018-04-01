@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './users.component';
 import { LoginComponent } from './login.component';
 import { UsersService } from './users.service';
+import { LoginService } from './login.service';
 import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
@@ -29,7 +30,10 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule
   ],
-  providers: [UsersService],
+  providers: [
+    UsersService,
+    LoginService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

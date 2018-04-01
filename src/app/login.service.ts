@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
+import { environment } from '../environments/environment'
 
 @Injectable()
 export class LoginService {
@@ -11,7 +12,7 @@ export class LoginService {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
     const body = `{"id": "${value.id}", "password": "${value.password}"}`;
-    return this.http.post('http://shuho-api.herokuapp.com/session', body, httpOptions);
+    return this.http.post(environment.apiEndpoint + 'session', body, httpOptions);
   }
 
 }
