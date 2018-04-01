@@ -5,17 +5,20 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users.component';
+import { LoginComponent } from './login.component';
 import { UsersService } from './users.service';
 import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
+  { path: '', component: LoginComponent },
   { path: 'users', component: UsersComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent
+    UsersComponent,
+    LoginComponent
   ],
   imports: [
     RouterModule.forRoot(

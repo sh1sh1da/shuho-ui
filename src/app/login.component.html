@@ -1,0 +1,10 @@
+<form #f="ngForm">
+  <label>ID:</label>
+  <input type="text" name="id" ngModel>
+
+  <label>PASS:</label>
+  <input type="text" name="password" ngModel>
+
+  <button type="submit" (click)="login(f.value)">ログイン</button>
+  <p>authorized: {{ authorized }}</p>
+</form>
