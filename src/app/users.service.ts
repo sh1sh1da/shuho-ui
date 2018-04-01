@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../environments/environment';
 
 @Injectable()
-export class UserService {
+export class UsersService {
 
   usersUrl = environment.apiEndpoint + 'users';
 
