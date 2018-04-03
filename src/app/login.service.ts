@@ -9,7 +9,8 @@ export class LoginService {
 
   login(value: any): Observable<any> {
     const httpOptions = {
-      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+      withCredentials: true
     };
     const body = `{"id": "${value.id}", "password": "${value.password}"}`;
     return this.http.post(environment.apiEndpoint + 'session', body, httpOptions);

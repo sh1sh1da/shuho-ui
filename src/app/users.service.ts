@@ -18,7 +18,8 @@ export class UsersService {
       new User("user2", 'pass2'),
     ];
     const httpOptions = {
-      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+      withCredentials: true
     };
     return this.http.get<User[]>(this.usersUrl, httpOptions);
   }
